@@ -1,3 +1,4 @@
+"""Interface for Authorization"""
 from abc import ABCMeta, abstractmethod
 
 
