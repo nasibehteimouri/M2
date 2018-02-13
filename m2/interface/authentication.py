@@ -23,12 +23,12 @@ class Authentication:
         """
         Return the status of an already authenticated entity
 
-        param: entity_id: the id of the enetity
+        param: entity_id: the id of the entity
         return: an integer indicating one of the following statuses:
-        0 means active,
-	1 means inactive (happend after the first warning due to e.g. unpaid-bill),
-        2 means revoked (happend after the end of the first warning duration),
-        3 means disabled
+        0 means ACTIVE,
+	1 means INACTIVE,
+        2 means REVOKED,
+        3 means DISABLED
         """
 
     @abstractmethod
@@ -37,6 +37,6 @@ class Authentication:
         Authenticate admin's legitimacy, more privilege is accessible
         to admin as compared to non-admin users
 
-        param: entity_id: the id of the enetity
+        param: entity_id: the id of the entity
         return: None in case of success, or otherwise raise an exception
         """
