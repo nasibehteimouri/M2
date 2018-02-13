@@ -1,27 +1,32 @@
-"""Interface for Target"""
+"""Target Interface"""
 from abc import ABCMeta, abstractmethod
 
 
 class Authorization:
-    """Class for specifying target"""
+    """Specify provisioning target"""
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def target(self, conf_file):
-        """Creates a target"""
-
-    @abstractmethod
-    def add_target(self, clone_ceph_name):
-        """Add a new target with given image"""
+    def add_target(self, clone_name):
+        """Registers a new target with given image
+	param: clone_name: 
+        return: 
+        """
 
     @abstractmethod
     def remove_target(self, clone_ceph_name):
-        """Remove a target"""
-
-    @abstractmethod
-    def delete_target(self, clone_ceph_name):
-        """delete a target"""
+        """Remove a target
+        
+        """
 
     @abstractmethod
     def list_targets(self):
-        """Show list of targets"""
+        """Show list of targets
+
+        """
+
+    @abstractmethod
+    def get_target_id(self):
+        """Show list of targets
+
+        """
