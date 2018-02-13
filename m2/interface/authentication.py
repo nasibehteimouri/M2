@@ -7,7 +7,7 @@ class Authentication:
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def is_legit(self, user_name, user_password):
+    def get_entity_id(self, user_name, user_password):
         """
         Authenticate entity's legitimacy
 
@@ -24,13 +24,17 @@ class Authentication:
         Return the status of an already authenticated entity
 
         param: entity_id: the id of the enetity
-        return: an integer indicating active, disabled, inactive, etc.
+        return: an integer indicating one of the following statuses:
+        0 means active,
+	1 means inactive (happend after the first warning due to e.g. unpaid-bill),
+        2 means revoked (happend after the end of the first warning duration),
+        3 means disabled
         """
 
     @abstractmethod
-    def is_admin(self, entity_id):
+    def ensure_admin(self, entity_id):
         """
-        Authenticate admin's legitimacy, more privillege is accessible
+        Authenticate admin's legitimacy, more privilege is accessible
         to admin as compared to non-admin users
 
         param: entity_id: the id of the enetity
