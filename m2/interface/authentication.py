@@ -1,4 +1,4 @@
-"""Authentication Interface"""
+""" Authentication Interface """
 from abc import ABCMeta, abstractmethod
 
 
