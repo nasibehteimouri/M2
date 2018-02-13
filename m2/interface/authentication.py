@@ -26,7 +26,7 @@ class Authentication:
         param: entity_id: the id of the entity
         return: an integer indicating one of the following statuses:
         0 means ACTIVE,
-	1 means INACTIVE,
+        1 means INACTIVE,
         2 means REVOKED,
         3 means DISABLED
         """
