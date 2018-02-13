@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 
 
 class Authentication:
-    """Confirm the legitimacy of a user"""
+    """ Confirm the legitimacy of a user """
     __metaclass__ = ABCMeta
 
     @abstractmethod
